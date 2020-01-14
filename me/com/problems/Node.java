@@ -1,4 +1,4 @@
-package me.ylchen.problems;
+package com.problems;
 
 public class Node {
     private final int value;

@@ -1,7 +1,4 @@
-package me.ylchen;
-
-import java.sql.Timestamp;
-import java.util.List;
+package com.algorithm.sort;
 
 public class SelectionSort {
     public static void main(String args[]) {

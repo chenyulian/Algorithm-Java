@@ -1,11 +1,9 @@
-package me.ylchen;
-
-import java.awt.event.ComponentAdapter;
+package com.algorithm.sort;
 
 public class InsertionSort {
     public static void main(String args[]){
         InsertionSort insertionSort = new InsertionSort();
-        SortTestHelper test = new SortTestHelper();
+        SortTestHelper test = new com.algorithm.sort.SortTestHelper();
         Integer[] arr = test.generateRandomArray(100000, 1, 3);
 
         insertionSort.sort(arr);

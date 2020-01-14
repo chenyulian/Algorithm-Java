@@ -1,4 +1,4 @@
-package me.ylchen;
+package com.algorithm.sort;
 
 public class Student implements Comparable {
     private int score;
