@@ -1,5 +1,7 @@
 package com.algorithm.sort;
 
+import com.test.Student;
+
 public class SelectionSort {
     public static void main(String args[]) {
         SortTestHelper test = new SortTestHelper();
@@ -15,7 +17,6 @@ public class SelectionSort {
         for(int i = 0; i < arr.length; i ++){
             System.out.print(arr[i] +" ");
         }
-        //test.testSort("me.ylchen.SelectionSort", arr);
         //System.out.print("\n" + "运行时间："+ (endTime - startTime) + "ms");
     }
 
