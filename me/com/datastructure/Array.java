@@ -75,7 +75,7 @@ public class Array {
         }
 
         for(int i = size - 1; i >= index; i --) {
-            data[i+1] = data[i];
+            data[i + 1] = data[i];
         }
         data[index] = element;
 
@@ -104,7 +104,120 @@ public class Array {
      * @return
      */
     public int get(int index) {
+        if(index < 0 || index > size)
+            throw new IllegalArgumentException("Get failed. Illegal index.");
         return data[index];
     }
+
+    /**
+     * Set an element at index of @Array
+     * @param index
+     * @param element
+     */
+    public void set(int index, int element) {
+        if(index < 0 || index > size)
+            throw new IllegalArgumentException("Set failed. Illegal index.");
+        data[index] = element;
+    }
+
+    /**
+     * Remove an element at index
+     * @param index
+     * @return value of removed element
+     */
+    public int remove(int index) {
+        if(index < 0 || index > size)
+            throw new IllegalArgumentException("Remove failed. Illegal index.");
+
+        int ret = data[index];
+
+        // loop to move elements
+        for(int i = index + 1; i < size; i ++) {
+            data[i - 1] = data[i];
+        }
+
+        size --;
+        return ret;
+    }
+
+    /**
+     * Remove an element
+     * @param element
+     */
+    public void removeElement(int element) {
+        int index = find(element);
+
+        if(index < 0) {
+            throw new IllegalArgumentException("Remove failed. No such element in Array.");
+        }else {
+            remove(index);
+        }
+    }
+
+    /**
+     * Remove the first element
+     */
+    public void removeFirst() {
+        remove(0);
+    }
+
+    /**
+     * Remove the last element
+     */
+    public void removeLast() {
+        remove(size - 1);
+    }
+
+    /**
+     * Find an element, returns true if it exists in @Array
+     * @param element
+     * @return
+     */
+    public boolean contains(int element) {
+        for(int i = 0; i < size; i ++) {
+            if(data[i] == element) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Find an element or elements, returns its or the first element's index.
+     * @param element
+     * @return
+     */
+    public int find(int element) {
+        for(int i = 0; i < size; i ++) {
+            if(data[i] == element) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public int findAll(int element) {
+        return -1;
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder res = new StringBuilder();
+        res.append(String.format("Array size: %d, capacity: %d \n", size, getCapacity()));
+        res.append("[");
+        if(size > 0) {
+            for(int i = 0; i < size; i ++) {
+                res.append(data[i]);
+                if(i < size - 1) {
+                    res.append(", ");
+                }
+            }
+        }
+        res.append("] \n");
+
+        return res.toString();
+    }
+
 
 }

@@ -1,4 +1,4 @@
-package com.algorithm.sort;
+package com.test;
 
 public class Student implements Comparable {
     private int score;
