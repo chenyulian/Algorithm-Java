@@ -1,4 +1,4 @@
-package src.test;
+package pers.kinp.test;
 
 public class Student implements Comparable {
     private int score;

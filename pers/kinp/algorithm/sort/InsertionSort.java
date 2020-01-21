@@ -1,4 +1,4 @@
-package src.algorithm.sort;
+package pers.kinp.algorithm.sort;
 
 public class InsertionSort {
     public static void main(String args[]){

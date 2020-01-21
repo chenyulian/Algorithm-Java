@@ -1,6 +1,6 @@
-package src.algorithm.sort;
+package pers.kinp.algorithm.sort;
 
-import src.test.Student;
+import pers.kinp.test.Student;
 
 public class SelectionSort {
     public static void main(String args[]) {

@@ -1,4 +1,4 @@
-package src.problems;
+package pers.kinp.problems;
 
 import java.util.Arrays;
 import java.util.List;

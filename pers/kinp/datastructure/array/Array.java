@@ -1,4 +1,4 @@
-package src.datastructure.array;
+package pers.kinp.datastructure.array;
 
 /**
  * An implementation of Array, one of the basic data structure.

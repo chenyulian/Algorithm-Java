@@ -1,4 +1,4 @@
-package src.algorithm.sort;
+package pers.kinp.algorithm.sort;
 
 import java.lang.reflect.Method;
 import java.util.Random;

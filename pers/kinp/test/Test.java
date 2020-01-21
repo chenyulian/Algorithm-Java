@@ -1,6 +1,6 @@
-package src.test;
+package pers.kinp.test;
 
-import src.datastructure.array.Array;
+import pers.kinp.datastructure.array.Array;
 
 public class Test {
     public static void main(String[] args) {

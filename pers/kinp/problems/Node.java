@@ -1,4 +1,4 @@
-package src.problems;
+package pers.kinp.problems;
 
 public class Node {
     private final int value;
