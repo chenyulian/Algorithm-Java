@@ -1,6 +1,6 @@
-package com.algorithm.sort;
+package src.algorithm.sort;
 
-import com.test.Student;
+import src.test.Student;
 
 public class SelectionSort {
     public static void main(String args[]) {

@@ -1,10 +1,10 @@
-package com.test;
+package src.test;
 
-import com.datastructure.Array;
+import src.datastructure.array.Array;
 
 public class Test {
     public static void main(String[] args) {
-        Array array = new Array(20);
+        Array array = new Array<Integer>(20);
 
         for(int i = 0; i < 10; i ++) {
             array.addLast(i);
@@ -29,6 +29,16 @@ public class Test {
         array.removeFirst();
         System.out.println(array);
 
-        System.out.println(array.find(4));
+        array.removeLast();
+        array.removeLast();
+        array.removeLast();
+        array.removeLast();
+        array.removeLast();
+        array.removeLast();
+        array.removeLast();
+        array.removeLast();
+        System.out.println(array);
+
+        //System.out.println(array.find(4));
     }
 }

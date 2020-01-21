@@ -1,4 +1,4 @@
-package com.test;
+package src.test;
 
 public class Student implements Comparable {
     private int score;

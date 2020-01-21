@@ -1,4 +1,4 @@
-package com.datastructure;
+package src.datastructure.array;
 
 /**
  * An implementation of Array, one of the basic data structure.

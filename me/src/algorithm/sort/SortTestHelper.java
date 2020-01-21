@@ -1,4 +1,4 @@
-package com.algorithm.sort;
+package src.algorithm.sort;
 
 import java.lang.reflect.Method;
 import java.util.Random;

@@ -1,4 +1,4 @@
-package com.problems;
+package src.problems;
 
 public class Node {
     private final int value;

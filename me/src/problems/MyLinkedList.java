@@ -1,7 +1,5 @@
-package com.problems;
+package src.problems;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -25,7 +23,7 @@ public class MyLinkedList {
 
     public static void main(String args[]) {
         MyLinkedList list = new MyLinkedList();
-        Node.printList(list.createLinkedList(new ArrayList<>()));
+        //Node.printList(list.createLinkedList(new ArrayList<>()));
         Node.printList(list.createLinkedList(Arrays.asList(1)));
         Node.printList(list.createLinkedList(Arrays.asList(1, 2, 3, 4, 5)));
     }

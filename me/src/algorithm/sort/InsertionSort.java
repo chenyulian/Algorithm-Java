@@ -1,9 +1,9 @@
-package com.algorithm.sort;
+package src.algorithm.sort;
 
 public class InsertionSort {
     public static void main(String args[]){
         InsertionSort insertionSort = new InsertionSort();
-        SortTestHelper test = new com.algorithm.sort.SortTestHelper();
+        SortTestHelper test = new SortTestHelper();
         Integer[] arr = test.generateRandomArray(100000, 1, 3);
 
         insertionSort.sort(arr);
