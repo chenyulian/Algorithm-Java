@@ -158,6 +158,22 @@ public class Array<E> {
     }
 
     /**
+     * get the last element
+     * @return the last element
+     */
+    public E getLast() {
+        return get(size - 1);
+    }
+
+    /**
+     * get the first element
+     * @return the first element
+     */
+    public E getFirst() {
+        return get(0);
+    }
+
+    /**
      * Set an element at index of the list
      * @param index index of the element to be set
      * @param element element to be stored at the specific position
