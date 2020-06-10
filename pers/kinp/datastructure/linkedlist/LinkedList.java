@@ -111,7 +111,7 @@ public class LinkedList<E> {
     }
 
     public E getLast() {
-        return get(size);
+        return get(size - 1);
     }
 
     /**
