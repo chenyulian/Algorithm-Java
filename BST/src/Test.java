@@ -4,9 +4,9 @@ public class Test {
         ////////////////
         //     5      //
         //    / \     //
-        //   2  6     //
+        //   3  6     //
         //  / \  \    //
-        // 3   4  8   //
+        // 2   4  8   //
         ////////////////
 
         BST<Integer> bst = new BST<>();
@@ -29,6 +29,10 @@ public class Test {
 
         // 后序遍历
         bst.postOrder();
+        System.out.println();
+
+        // 层序遍历
+        bst.levelOrder();
         System.out.println();
 
         //System.out.println(bst);

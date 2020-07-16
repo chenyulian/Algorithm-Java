@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class BST<E extends Comparable<E>> {
@@ -171,6 +173,31 @@ public class BST<E extends Comparable<E>> {
         postOrder(node.left);
         postOrder(node.right);
         System.out.println(node.e);
+    }
+
+    // 层序遍历（广度优先遍历）
+    public void levelOrder() {
+
+        System.out.println("层序遍历：");
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+
+        while(!queue.isEmpty()) {
+            Node cur = queue.remove();
+
+            System.out.println(cur.e);
+
+            // 分别将左右节点添加到队列
+            // 队列是先进先出，我们需要先处理左节点，再处理右节点，因此先将左节点添加至队列
+            if(cur.left != null) {
+                queue.add(cur.left);
+            }
+
+            if(cur.right != null) {
+                queue.add(cur.right);
+            }
+
+        }
     }
 
     @Override
