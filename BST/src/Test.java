@@ -19,6 +19,10 @@ public class Test {
         bst.preOrder();
         System.out.println();
 
+        // 前序遍历（非递归）
+        bst.preOrderNR();
+        System.out.println();
+
         // 中序遍历
         bst.inOrder();
         System.out.println();

@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 public class BST<E extends Comparable<E>> {
     private class Node {
         public E e;
@@ -115,6 +117,28 @@ public class BST<E extends Comparable<E>> {
         //先遍历左子树，再遍历右子树
         preOrder(node.left);
         preOrder(node.right);
+    }
+
+    // 非递归的方式实现前序遍历
+    public void preOrderNR() {
+        System.out.println("前序遍历（非递归）：");
+        Stack<Node> stack = new Stack<>();
+        stack.push(root);
+
+        while(!stack.empty()) {
+            // 对当前节点进行操作，并出栈
+            Node cur = stack.pop();
+            System.out.println(cur.e);
+
+            // 如果存在子节点，就压入栈。
+            // 栈是先进后出，我们需要先处理左节点，再处理右节点，因此先将右节点压入栈
+            if(cur.right != null) {
+                stack.push(cur.right);
+            }
+            if (cur.left != null) {
+                stack.push(cur.left);
+            }
+        }
     }
 
     // 中序遍历
