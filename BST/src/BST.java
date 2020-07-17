@@ -200,6 +200,87 @@ public class BST<E extends Comparable<E>> {
         }
     }
 
+    // 找到BST中的最小元素
+    public E minimum() {
+        if(size == 0) {
+            throw new IllegalArgumentException("Empty Binary Search Tree");
+        }
+
+        return minimum(root).e;
+    }
+
+    // 返回以node为根的树
+    private Node minimum(Node node) {
+
+        if(node.left == null) {
+            return node;
+        }
+        return minimum(node.left);
+    }
+
+    // 找到BST中的最大元素
+    public E maximum() {
+        if(size == 0) {
+            throw new IllegalArgumentException("Empty Binary Search Tree");
+        }
+
+        return maximum(root).e;
+    }
+
+    private Node maximum(Node node) {
+
+        if(node.right == null) {
+            return node;
+        }
+
+        return maximum(node.right);
+    }
+
+    // 删除BST中最小的元素
+    public E removeMin() {
+        E min = minimum();
+        root = removeMin(root);
+        return min;
+    }
+
+    // 返回删除最小元素后的BST的根
+    private Node removeMin(Node node) {
+        // 递归终止条件，当node没有左子节点的时候
+        if(node.left == null) {
+            // 此时有两种情况：
+            // 1. node也没有右子节点，即它是一个叶子节点，直接删除即可，也就是node的父节点的左子节点为null
+            // 2. node有右子节点，需要把它的右子树挂接到它的父节点上，也就是成为node的父节点的左子树
+            Node rightNode = node.right;
+            node.right = null;
+            size --;
+            return rightNode;
+        }
+
+        node.left = removeMin(node.left);
+        return node;
+    }
+
+    // 删除BST中的最大元素
+    public E removeMax() {
+        E ret = maximum();
+        root = removeMax(root);
+        return ret;
+    }
+
+    // 返回删除最大元素后新的BST的根
+    private Node removeMax(Node node) {
+        if(node.right == null) {
+            Node leftNode = node.left;
+            node.left = null;
+            size --;
+            return leftNode;
+        }
+
+        node.right = removeMax(node.right);
+        return node;
+    }
+
+
     @Override
     public String toString() {
         StringBuilder res = new StringBuilder();
