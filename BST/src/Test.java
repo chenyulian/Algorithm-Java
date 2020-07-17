@@ -88,6 +88,12 @@ public class Test {
         System.out.println("测试删除树中的最大元素 通过");
         System.out.println("测试删除树中的最大元素 end");
 
+        System.out.println();
+        System.out.println("测试删除树种的指定元素 start");
+        System.out.println(bst);
+        bst.remove(3);
+        System.out.println(bst);
+        System.out.println("测试删除树种的指定元素 end");
         //System.out.println(bst);
     }
 }
